@@ -1,6 +1,7 @@
 # refactor-description-consistency
 
-A human-annotated dataset of 200 refactoring PRs (Extract/Move Method, Extract Class, Move Method/Field) checking whether the code changes match the PR title and description.
+A human-annotated dataset of 200 refactoring PRs (Extract Method, Move Method, Extract Class, Extract Field, Move Field) checking whether the code changes match the PR title and description.
+
 
 # Dataset Description
 
