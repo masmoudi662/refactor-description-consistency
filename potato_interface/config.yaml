@@ -1,0 +1,43 @@
+annotation_task_name: Refactoring PR Consistency
+task_dir: .
+output_annotation_dir: annotation_output/
+export_annotation_format: tsv
+data_files:
+- data/prs.jsonl
+item_properties:
+  id_key: id
+  text_key: text
+user_config:
+  allow_all_users: true
+  users: []
+alert_time_each_instance: 10000000
+
+phases:
+  order:
+  - guidelines
+  - annotation
+  guidelines:
+    type: instructions
+    file: surveys/instructions.html
+
+annotation_instructions: |
+  Check **each bullet** of the description against the code changes.
+  - **Consistent**: every bullet matches the code changes.
+  - **Inconsistent**: at least one bullet doesn't match.
+  - **Unavailable**: the PR is not available.
+  - **Out of scope**: The PR is not an extract/move method, extract class, extract/move field or refactor.
+
+annotation_schemes:
+- annotation_type: radio
+  name: consistency
+  description: Do the code changes match the PR title and description?
+  labels:
+  - Consistent
+  - Inconsistent
+  - Unavailable
+  - Out of scope
+  sequential_key_binding: true
+- annotation_type: text
+  name: notes
+  description: Notes (which bullet doesn't match, why out of scope, etc.)
+site_dir: default
