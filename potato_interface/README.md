@@ -9,7 +9,7 @@ We use **[Potato](https://github.com/davidjurgens/potato)**, an open-source anno
 **Run it on your own computer**
 
 1. Install **Python 3.8 or higher**.
-2. Download and unzip the project folder: **https://github.com/masmoudi662/refactor-description-consistency/blob/main/potato_interface/pr-annotation.zip**Click the three dots (⋯) in the top-right corner of the folder page, then click Download
+2. Download and unzip the project folder: https://github.com/masmoudi662/refactor-description-consistency/blob/main/potato_interface/pr-annotation.zip Click the three dots (⋯) in the top-right corner of the folder page, then click Download
 3. Open a terminal inside the `pr-annotation` folder and run:
 
 ```bash
