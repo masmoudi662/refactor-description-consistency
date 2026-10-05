@@ -12,6 +12,9 @@ user_config:
   users: []
 alert_time_each_instance: 10000000
 
+media_directory: media
+annotation_codebook_url: /media/instructions.html
+
 phases:
   order:
   - guidelines
@@ -19,13 +22,6 @@ phases:
   guidelines:
     type: instructions
     file: surveys/instructions.html
-
-annotation_instructions: |
-  Check **each bullet** of the description against the code changes.
-  - **Consistent**: every bullet matches the code changes.
-  - **Inconsistent**: at least one bullet doesn't match.
-  - **Unavailable**: the PR is not available.
-  - **Out of scope**: The PR is not an extract/move method, extract class, extract/move field or refactor.
 
 annotation_schemes:
 - annotation_type: radio
