@@ -1,1 +1,39 @@
+annotation_task_name: Refactoring PR Consistency
+task_dir: .
+output_annotation_dir: annotation_output/
+export_annotation_format: tsv
+data_files:
+- data/prs.jsonl
+item_properties:
+  id_key: id
+  text_key: text
+user_config:
+  allow_all_users: true
+  users: []
+alert_time_each_instance: 10000000
 
+media_directory: media
+annotation_codebook_url: /media/instructions.html
+
+phases:
+  order:
+  - guidelines
+  - annotation
+  guidelines:
+    type: instructions
+    file: surveys/instructions.html
+
+annotation_schemes:
+- annotation_type: radio
+  name: consistency
+  description: Do the code changes match the PR title and description?
+  labels:
+  - Consistent
+  - Inconsistent
+  - Unavailable
+  - Out of scope
+  sequential_key_binding: true
+- annotation_type: text
+  name: notes
+  description: Notes (which bullet doesn't match, why out of scope, etc.)
+site_dir: default
